@@ -1,0 +1,45 @@
+package junitAssignment;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+class MinMaxFinderTest {
+	
+	int[] arr1= new int[] {56, 34, 7,3, 54, 3, 34, 34, 53};
+	int[] arr2= new int[] {56, 34, 7,-5, 54, 15, -3, 34, 53};
+	int[] arr3= new int[] {100, 34, 7,-5, 54, 15, 34, 34, 53};
+
+	MinMaxFinder mn;
+	
+	@BeforeEach
+	void init() {
+		 mn=new MinMaxFinder();
+
+	}
+	
+	@Test
+	void test1() {
+		int[] expected= {3,56};
+		int[] actual=mn.findMinMax(arr1);
+		assertArrayEquals(expected, actual);
+	}
+	
+	@Test
+	@DisplayName("Test2")
+	void test2() {
+		int[] expected= {-5,56};
+		int[] actual=mn.findMinMax(arr2);
+		assertArrayEquals(expected, actual);
+	}
+	@Test
+	@DisplayName("Test3")
+	void test3() {
+		int[] expected= {-5,100};
+		int[] actual=mn.findMinMax(arr3);
+		assertArrayEquals(expected, actual);
+	}
+	
+}
