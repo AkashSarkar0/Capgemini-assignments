@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"	>
+
+
+<bean id="helloBean" class="springcore_example.helloBean" >
+
+<constructor-arg value="Akash !" ></constructor-arg>                    <!--  by constructor injection -->
+
+
+<!-- <property name="name" value="Akash !" ></property> -->              <!-- by setter injection -->
+
+</bean>
+
+</beans>
+
+	
